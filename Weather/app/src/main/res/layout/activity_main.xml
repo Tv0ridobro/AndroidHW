@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/weather"
+        android:textColor="@color/mainColor"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainColor"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+    <TextView
+        android:id="@+id/dayOfWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+    <ImageView
+        android:id="@+id/todayIcon"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/sunny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayOfWeek" />
+
+    <ImageView
+        android:id="@+id/windIcon"
+        style="@style/infoIcons"
+        android:src="@drawable/wind"
+        app:layout_constraintEnd_toStartOf="@+id/humidityIcon"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todayIcon" />
+
+    <ImageView
+        android:id="@+id/humidityIcon"
+        style="@style/infoIcons"
+        android:src="@drawable/humidity"
+        app:layout_constraintEnd_toStartOf="@+id/temperatureIcon"
+        app:layout_constraintStart_toEndOf="@+id/windIcon"
+        app:layout_constraintTop_toBottomOf="@+id/todayIcon" />
+
+    <ImageView
+        android:id="@+id/temperatureIcon"
+        style="@style/infoIcons"
+        android:src="@drawable/thermometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humidityIcon"
+        app:layout_constraintTop_toBottomOf="@+id/todayIcon" />
+
+
+    <TextView
+        android:id="@+id/windToday"
+        style="@style/todayInfo"
+        android:text="@string/wind"
+        app:layout_constraintEnd_toStartOf="@+id/humidityToday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windIcon" />
+
+    <TextView
+        android:id="@+id/humidityToday"
+        style="@style/todayInfo"
+        android:text="@string/humidity"
+        app:layout_constraintEnd_toStartOf="@+id/temperatureToday"
+        app:layout_constraintStart_toEndOf="@+id/windToday"
+        app:layout_constraintTop_toBottomOf="@+id/humidityIcon" />
+
+    <TextView
+        android:id="@+id/temperatureToday"
+        style="@style/todayInfo"
+        android:text="@string/temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/humidityToday"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureIcon" />
+
+    <include
+        layout="@layout/weekinfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidityToday"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

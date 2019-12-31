@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/monday"
+        style="@style/bottomText"
+        android:text="@string/monday"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintBottom_toTopOf="@+id/mondayIcon"
+        app:layout_constraintEnd_toStartOf="@id/tuesday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tuesday"
+        style="@style/bottomText"
+        android:text="@string/tuesday"
+        app:layout_constraintBottom_toTopOf="@+id/tuesdayIcon"
+        app:layout_constraintEnd_toStartOf="@id/wednesday"
+        app:layout_constraintStart_toEndOf="@id/monday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wednesday"
+        style="@style/bottomText"
+        android:text="@string/wednesday"
+        app:layout_constraintBottom_toTopOf="@+id/wednesdayIcon"
+        app:layout_constraintEnd_toStartOf="@id/thursday"
+        app:layout_constraintStart_toEndOf="@id/tuesday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/thursday"
+        style="@style/bottomText"
+        android:text="@string/thursday"
+        app:layout_constraintBottom_toTopOf="@+id/thursdayIcon"
+        app:layout_constraintEnd_toStartOf="@id/friday"
+        app:layout_constraintStart_toEndOf="@id/wednesday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/friday"
+        style="@style/bottomText"
+        android:text="@string/friday"
+        app:layout_constraintBottom_toTopOf="@+id/fridayIcon"
+        app:layout_constraintEnd_toStartOf="@id/saturday"
+        app:layout_constraintStart_toEndOf="@id/thursday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/saturday"
+        style="@style/bottomText"
+        android:text="@string/saturday"
+        app:layout_constraintBottom_toTopOf="@+id/saturdayIcon"
+        app:layout_constraintEnd_toStartOf="@id/sunday"
+        app:layout_constraintStart_toEndOf="@id/friday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sunday"
+        style="@style/bottomText"
+        android:text="@string/sunday"
+        app:layout_constraintBottom_toTopOf="@+id/sundayIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/saturday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/mondayIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/rainy"
+        app:layout_constraintBottom_toTopOf="@+id/mondayHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/tuesdayIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monday" />
+
+    <TextView
+        android:id="@+id/mondayHumidity"
+        style="@style/bottomInfo"
+        android:text="@string/mondayH"
+        app:layout_constraintBottom_toTopOf="@+id/mondayTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/tuesdayHumidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mondayIcon" />
+
+
+    <TextView
+        android:id="@+id/mondayTemperature"
+        style="@style/bottomInfo"
+        android:text="@string/mondayT"
+        app:layout_constraintBottom_toTopOf="@+id/mondayWind"
+        app:layout_constraintEnd_toStartOf="@+id/tuesdayTemperature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mondayHumidity" />
+
+    <TextView
+        android:id="@+id/mondayWind"
+        style="@style/bottomInfo"
+        android:text="@string/mondayW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tuesdayWind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mondayTemperature" />
+
+    <ImageView
+        android:id="@+id/tuesdayIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/rainysunny"
+        app:layout_constraintBottom_toTopOf="@+id/tuesdayHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/wednesdayIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mondayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tuesday" />
+
+    <TextView
+        android:id="@+id/tuesdayHumidity"
+        style="@style/bottomInfo"
+        android:text="@string/tuesdayH"
+        app:layout_constraintBottom_toTopOf="@+id/tuesdayTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/wednesdayHumidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mondayHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/tuesdayIcon" />
+
+    <TextView
+        android:id="@+id/tuesdayTemperature"
+        style="@style/bottomInfo"
+        android:text="@string/tuesdayT"
+        app:layout_constraintBottom_toTopOf="@+id/tuesdayWind"
+        app:layout_constraintEnd_toStartOf="@+id/wednesdayTemperature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mondayTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/tuesdayHumidity" />
+
+
+    <TextView
+        android:id="@+id/tuesdayWind"
+        style="@style/bottomInfo"
+        android:text="@string/tuesdayW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wednesdayWind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mondayWind"
+        app:layout_constraintTop_toBottomOf="@+id/tuesdayTemperature" />
+
+    <ImageView
+        android:id="@+id/wednesdayIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sunny"
+        app:layout_constraintBottom_toTopOf="@+id/wednesdayHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/thursdayIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tuesdayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/wednesday" />
+
+    <TextView
+        android:id="@+id/wednesdayHumidity"
+        style="@style/bottomInfo"
+        android:text="@string/wednesdayH"
+        app:layout_constraintBottom_toTopOf="@+id/wednesdayTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/thursdayHumidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tuesdayHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/wednesdayIcon" />
+
+    <TextView
+        android:id="@+id/wednesdayTemperature"
+        style="@style/bottomInfo"
+        android:text="@string/wednesdayT"
+        app:layout_constraintBottom_toTopOf="@+id/wednesdayWind"
+        app:layout_constraintEnd_toStartOf="@+id/thursdayTemperature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tuesdayTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/wednesdayHumidity" />
+
+
+    <TextView
+        android:id="@+id/wednesdayWind"
+        style="@style/bottomInfo"
+        android:text="@string/wednesdayW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/thursdayWind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tuesdayWind"
+        app:layout_constraintTop_toBottomOf="@+id/wednesdayTemperature" />
+
+    <ImageView
+        android:id="@+id/thursdayIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sunny"
+        app:layout_constraintBottom_toTopOf="@+id/thursdayHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/fridayIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wednesdayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/thursday" />
+
+    <TextView
+        android:id="@+id/thursdayHumidity"
+        style="@style/bottomInfo"
+        android:text="@string/thursdayH"
+        app:layout_constraintBottom_toTopOf="@+id/thursdayTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/fridayHumidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wednesdayHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/thursdayIcon" />
+
+    <TextView
+        android:id="@+id/thursdayTemperature"
+        style="@style/bottomInfo"
+        android:text="@string/thursdayT"
+        app:layout_constraintBottom_toTopOf="@+id/thursdayWind"
+        app:layout_constraintEnd_toStartOf="@+id/fridayTemperature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wednesdayTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/thursdayHumidity" />
+
+
+    <TextView
+        android:id="@+id/thursdayWind"
+        style="@style/bottomInfo"
+        android:text="@string/thursdayW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fridayWind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wednesdayWind"
+        app:layout_constraintTop_toBottomOf="@+id/thursdayTemperature" />
+
+    <ImageView
+        android:id="@+id/fridayIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/cloudy"
+        app:layout_constraintBottom_toTopOf="@+id/fridayHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/saturdayIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/thursdayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/friday" />
+
+    <TextView
+        android:id="@+id/fridayHumidity"
+        style="@style/bottomInfo"
+        android:text="@string/fridayH"
+        app:layout_constraintBottom_toTopOf="@+id/fridayTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/saturdayHumidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/thursdayHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/fridayIcon" />
+
+    <TextView
+        android:id="@+id/fridayTemperature"
+        style="@style/bottomInfo"
+        android:text="@string/fridayT"
+        app:layout_constraintBottom_toTopOf="@+id/fridayWind"
+        app:layout_constraintEnd_toStartOf="@+id/saturdayTemperature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/thursdayTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/fridayHumidity" />
+
+
+    <TextView
+        android:id="@+id/fridayWind"
+        style="@style/bottomInfo"
+        android:text="@string/fridayW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saturdayWind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/thursdayWind"
+        app:layout_constraintTop_toBottomOf="@+id/fridayTemperature" />
+
+    <ImageView
+        android:id="@+id/saturdayIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/rainysunny"
+        app:layout_constraintBottom_toTopOf="@+id/saturdayHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/sundayIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fridayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/saturday" />
+
+    <TextView
+        android:id="@+id/saturdayHumidity"
+        style="@style/bottomInfo"
+        android:text="@string/saturdayH"
+        app:layout_constraintBottom_toTopOf="@+id/saturdayTemperature"
+        app:layout_constraintEnd_toStartOf="@+id/sundayHumidity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fridayHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/saturdayIcon" />
+
+    <TextView
+        android:id="@+id/saturdayTemperature"
+        style="@style/bottomInfo"
+        android:text="@string/saturdayT"
+        app:layout_constraintBottom_toTopOf="@+id/saturdayWind"
+        app:layout_constraintEnd_toStartOf="@+id/sundayTemperature"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fridayTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/saturdayHumidity" />
+
+
+    <TextView
+        android:id="@+id/saturdayWind"
+        style="@style/bottomInfo"
+        android:text="@string/saturdayW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sundayWind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fridayWind"
+        app:layout_constraintTop_toBottomOf="@+id/saturdayTemperature" />
+
+    <ImageView
+        android:id="@+id/sundayIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/cloudy"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintBottom_toTopOf="@+id/sundayHumidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/saturdayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/sunday" />
+
+    <TextView
+        android:id="@+id/sundayHumidity"
+        style="@style/bottomInfo"
+        android:text="@string/sundayH"
+        app:layout_constraintBottom_toTopOf="@+id/sundayTemperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/saturdayHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/sundayIcon" />
+
+    <TextView
+        android:id="@+id/sundayTemperature"
+        style="@style/bottomInfo"
+        android:text="@string/sundayT"
+        app:layout_constraintBottom_toTopOf="@+id/sundayWind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/saturdayTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/sundayHumidity" />
+
+    <TextView
+        android:id="@+id/sundayWind"
+        style="@style/bottomInfo"
+        android:text="@string/sundayW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/saturdayWind"
+        app:layout_constraintTop_toBottomOf="@+id/sundayTemperature" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

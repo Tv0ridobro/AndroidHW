@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="@string/weather"
+        android:textColor="@color/mainColor"
+        android:textSize="50sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <ImageView
+        android:id="@+id/todayIcon"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/sunny"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/dayOfWeek" />
+
+    <TextView
+        android:id="@+id/dayOfWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mainColor"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+
+    <ImageView
+        android:id="@+id/windIcon"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:src="@drawable/wind"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/humidityIcon"
+        app:layout_constraintTop_toBottomOf="@+id/todayIcon" />
+
+    <ImageView
+        android:id="@+id/humidityIcon"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:src="@drawable/humidity"
+        app:layout_constraintLeft_toRightOf="@+id/windIcon"
+        app:layout_constraintRight_toLeftOf="@+id/temperatureIcon"
+        app:layout_constraintTop_toBottomOf="@+id/todayIcon" />
+
+
+    <ImageView
+        android:id="@+id/temperatureIcon"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:src="@drawable/thermometer"
+        app:layout_constraintLeft_toRightOf="@+id/humidityIcon"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/todayIcon" />
+
+    <TextView
+        android:id="@+id/windToday"
+        style="@style/todayInfo"
+        android:text="@string/wind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/humidityToday"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windIcon" />
+
+    <TextView
+        android:id="@+id/humidityToday"
+        style="@style/todayInfo"
+        android:text="@string/humidity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/temperatureToday"
+        app:layout_constraintStart_toEndOf="@+id/windToday"
+        app:layout_constraintTop_toBottomOf="@+id/humidityIcon" />
+
+    <TextView
+        android:id="@+id/temperatureToday"
+        style="@style/todayInfo"
+        android:text="@string/temperature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/humidityToday"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureIcon" />
+
+
+    <include
+        layout="@layout/weekinfo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

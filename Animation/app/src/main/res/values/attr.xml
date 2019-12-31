@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomAnimation">
+        <attr name="rectCornerRadius" format="float" />
+        <attr name="color" format="color|reference" />
+        <attr name="scale" format="float" />
+        <attr name="thick" format="float" />
+        <attr name="duration" format="integer" />
+        <attr name="delay" format="integer" />
+        <attr name="distance" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomViewGroup_Layout">
+        <attr name="xPercent" format="float" />
+        <attr name="yPercent" format="float" />
+    </declare-styleable>
+
+
+</resources>

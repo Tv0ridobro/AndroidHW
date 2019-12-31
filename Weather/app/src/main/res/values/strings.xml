@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="weather">Weather</string>
+    <string name="wind">wind :</string>
+    <string name="humidity">humidity :</string>
+    <string name="temperature">temperature :</string>
+    <string name="monday">M</string>
+    <string name="tuesday">T</string>
+    <string name="wednesday">W</string>
+    <string name="thursday">T</string>
+    <string name="friday">F</string>
+    <string name="saturday">S</string>
+    <string name="sunday">S</string>
+    <string name="mondayH">72 %</string>
+    <string name="mondayT">23°C</string>
+    <string name="mondayW">3 mph</string>
+    <string name="tuesdayH">67 %</string>
+    <string name="tuesdayT">25°C</string>
+    <string name="tuesdayW">5 mph</string>
+    <string name="wednesdayH">90 %</string>
+    <string name="wednesdayT">20°C</string>
+    <string name="wednesdayW">4 mph</string>
+    <string name="thursdayH">80 %</string>
+    <string name="thursdayT">16°C</string>
+    <string name="thursdayW">6 mph</string>
+    <string name="fridayH">55 %</string>
+    <string name="fridayT">19°C</string>
+    <string name="fridayW">7 mph</string>
+    <string name="saturdayH">86 %</string>
+    <string name="saturdayT">26°C</string>
+    <string name="saturdayW">6 mph</string>
+    <string name="sundayH">81 %</string>
+    <string name="sundayT">22°C</string>
+    <string name="sundayW">2 mph</string>
+</resources>
